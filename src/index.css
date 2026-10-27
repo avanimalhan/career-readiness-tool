@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #eef3f8;
+  --fg: #10213a;
+  --muted: #5b6b82;
+  --card: #ffffff;
+  --border: #d5dfeb;
+  --accent: #ff5a2c;
+  --ok: #0b9a8d;
+  --tint: #e1ecf7;
+}
+
+[data-theme='dark'] {
+  --bg: #0b1626;
+  --fg: #eaf1fb;
+  --muted: #93a5bf;
+  --card: #13243b;
+  --border: #27405f;
+  --accent: #ff7048;
+  --ok: #2ec4b6;
+  --tint: #1a3050;
+}
+
+body {
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dot Grid Background */
+.dot-grid {
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* 3D Button Effect */
+.btn-3d {
+  position: relative;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 0 0 var(--border);
+}
+
+.btn-3d:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 var(--border);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
